@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }</script>
 <title>Alina_astropsychology</title>
 <meta name="description" content="Аліна — дипломований астролог та психолог. Натальні карти, соляри, синастрії, психологічні консультації. Індивідуальний підхід до самопізнання.">
 <meta property="og:title" content="Alina_astropsychology">
@@ -1707,6 +1708,13 @@ footer.site-footer .foot-note{ opacity: 0.6; margin-top: 6px; }
 <script>
 (function(){
   "use strict";
+
+  // Guard against the browser restoring a previous scroll position (or
+  // jumping to a stale #hash left in the URL from a prior visit) on load —
+  // this is a single-page site, so every fresh load should start at the top.
+  if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+  window.scrollTo(0, 0);
+  window.addEventListener('load', function(){ window.scrollTo(0, 0); });
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var isMobile = window.matchMedia('(max-width: 767px)').matches;
