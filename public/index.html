@@ -789,6 +789,12 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; line-height: 
   transform: scale(1.3);
 }
 
+.testi-more-wrap{
+  display: none;
+  justify-content: center;
+  margin-top: 32px;
+}
+
 /* ============================================================
    CTA
    ============================================================ */
@@ -1129,6 +1135,10 @@ footer.site-footer .foot-note{ opacity: 0.6; margin-top: 6px; }
   .testi-scroller{ display: grid; grid-template-columns: repeat(3, 1fr); overflow: visible; padding: 4px 0 10px; margin: 0; }
   .testi-card{ flex-basis: auto; }
   .testi-dots{ display: none; }
+
+  .testi-scroller:not(.expanded) .testi-card.testi-extra{ display: none; }
+  .testi-more-wrap{ display: flex; }
+  .testi-scroller.expanded ~ .testi-more-wrap{ display: none; }
 }
 
 /* ============================================================
@@ -1541,9 +1551,97 @@ footer.site-footer .foot-note{ opacity: 0.6; margin-top: 6px; }
           </div>
         </div>
       </article>
+
+      <article class="testi-card testi-extra reveal reveal-delay-3">
+        <span class="testi-quote-mark" aria-hidden="true">"</span>
+        <p class="testi-text">[Місце для реального відгуку клієнтки/клієнта — вставте текст тут]</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.3"/><path d="M4 20c1-5 4-7 8-7s7 2 8 7" stroke="currentColor" stroke-width="1.3"/></svg></div>
+          <div>
+            <div class="name">Ім'я клієнта</div>
+            <div class="role">Послуга: [вкажіть]</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card testi-extra reveal">
+        <span class="testi-quote-mark" aria-hidden="true">"</span>
+        <p class="testi-text">[Місце для реального відгуку клієнтки/клієнта — вставте текст тут]</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.3"/><path d="M4 20c1-5 4-7 8-7s7 2 8 7" stroke="currentColor" stroke-width="1.3"/></svg></div>
+          <div>
+            <div class="name">Ім'я клієнтки</div>
+            <div class="role">Послуга: [вкажіть]</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card testi-extra reveal reveal-delay-1">
+        <span class="testi-quote-mark" aria-hidden="true">"</span>
+        <p class="testi-text">[Місце для реального відгуку клієнтки/клієнта — вставте текст тут]</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.3"/><path d="M4 20c1-5 4-7 8-7s7 2 8 7" stroke="currentColor" stroke-width="1.3"/></svg></div>
+          <div>
+            <div class="name">Ім'я клієнта</div>
+            <div class="role">Послуга: [вкажіть]</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card testi-extra reveal reveal-delay-2">
+        <span class="testi-quote-mark" aria-hidden="true">"</span>
+        <p class="testi-text">[Місце для реального відгуку клієнтки/клієнта — вставте текст тут]</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.3"/><path d="M4 20c1-5 4-7 8-7s7 2 8 7" stroke="currentColor" stroke-width="1.3"/></svg></div>
+          <div>
+            <div class="name">Ім'я клієнтки</div>
+            <div class="role">Послуга: [вкажіть]</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card testi-extra reveal reveal-delay-3">
+        <span class="testi-quote-mark" aria-hidden="true">"</span>
+        <p class="testi-text">[Місце для реального відгуку клієнтки/клієнта — вставте текст тут]</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.3"/><path d="M4 20c1-5 4-7 8-7s7 2 8 7" stroke="currentColor" stroke-width="1.3"/></svg></div>
+          <div>
+            <div class="name">Ім'я клієнта</div>
+            <div class="role">Послуга: [вкажіть]</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card testi-extra reveal">
+        <span class="testi-quote-mark" aria-hidden="true">"</span>
+        <p class="testi-text">[Місце для реального відгуку клієнтки/клієнта — вставте текст тут]</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.3"/><path d="M4 20c1-5 4-7 8-7s7 2 8 7" stroke="currentColor" stroke-width="1.3"/></svg></div>
+          <div>
+            <div class="name">Ім'я клієнтки</div>
+            <div class="role">Послуга: [вкажіть]</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card testi-extra reveal reveal-delay-1">
+        <span class="testi-quote-mark" aria-hidden="true">"</span>
+        <p class="testi-text">[Місце для реального відгуку клієнтки/клієнта — вставте текст тут]</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.3"/><path d="M4 20c1-5 4-7 8-7s7 2 8 7" stroke="currentColor" stroke-width="1.3"/></svg></div>
+          <div>
+            <div class="name">Ім'я клієнта</div>
+            <div class="role">Послуга: [вкажіть]</div>
+          </div>
+        </div>
+      </article>
     </div>
 
     <div class="testi-dots" id="testiDots"></div>
+
+    <div class="testi-more-wrap">
+      <button type="button" class="btn btn-outline on-light testi-show-more" id="testiShowMoreBtn" aria-expanded="false" aria-controls="testiScroller">Показати ще</button>
+    </div>
   </div>
 </section>
 
@@ -2064,6 +2162,22 @@ footer.site-footer .foot-note{ opacity: 0.6; margin-top: 6px; }
       requestAnimationFrame(updateActiveDot);
     }
   }, { passive: true });
+
+  /* ============================================================
+     TESTIMONIALS: "Показати ще" reveals the rest on desktop grid
+     ============================================================ */
+  var testiShowMoreBtn = document.getElementById('testiShowMoreBtn');
+  if (testiShowMoreBtn){
+    testiShowMoreBtn.addEventListener('click', function(){
+      testiScroller.classList.add('expanded');
+      testiShowMoreBtn.setAttribute('aria-expanded', 'true');
+      // extra cards were display:none, so the reveal IntersectionObserver
+      // never had a chance to fire on them — show them directly here
+      testiScroller.querySelectorAll('.testi-card.testi-extra.reveal').forEach(function(card){
+        card.classList.add('in-view');
+      });
+    });
+  }
 
   /* ============================================================
      CONTACT FORM
