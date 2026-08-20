@@ -1056,6 +1056,57 @@ footer.site-footer .foot-note{ opacity: 0.6; margin-top: 6px; }
   .services-hint{ display: none; }
 }
 
+/* Timeline: zigzag around a centered gold line on wider screens */
+@media (min-width: 960px){
+  .timeline{ padding-left: 0; }
+  .timeline-track{ left: 50%; transform: translateX(-50%); }
+
+  .timeline-item{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 64px;
+    align-items: start;
+    padding-bottom: 64px;
+  }
+  .timeline-dot{
+    left: 50%;
+    top: 2px;
+    transform: translateX(-50%);
+  }
+  .timeline-num-col{ grid-row: 1; }
+  .timeline-content{ grid-row: 1; max-width: none; }
+
+  /* Odd steps (01, 03, 05): text hugs the line from the left, dot sits to its right */
+  .timeline-item[data-step="1"] .timeline-content,
+  .timeline-item[data-step="3"] .timeline-content,
+  .timeline-item[data-step="5"] .timeline-content{
+    grid-column: 1;
+    text-align: right;
+  }
+  .timeline-item[data-step="1"] .timeline-num-col,
+  .timeline-item[data-step="3"] .timeline-num-col,
+  .timeline-item[data-step="5"] .timeline-num-col{
+    grid-column: 2;
+  }
+  .timeline-item[data-step="1"] p,
+  .timeline-item[data-step="3"] p,
+  .timeline-item[data-step="5"] p{
+    margin-left: auto;
+  }
+
+  /* Even steps (02, 04): text hugs the line from the right, dot sits to its left */
+  .timeline-item[data-step="2"] .timeline-content,
+  .timeline-item[data-step="4"] .timeline-content{
+    grid-column: 2;
+    text-align: left;
+  }
+  .timeline-item[data-step="2"] .timeline-num-col,
+  .timeline-item[data-step="4"] .timeline-num-col{
+    grid-column: 1;
+  }
+}
+
 /* ============================================================
    BREAKPOINTS — DESKTOP NAV (>=1080px)
    ============================================================ */
@@ -1078,13 +1129,6 @@ footer.site-footer .foot-note{ opacity: 0.6; margin-top: 6px; }
   .testi-scroller{ display: grid; grid-template-columns: repeat(3, 1fr); overflow: visible; padding: 4px 0 10px; margin: 0; }
   .testi-card{ flex-basis: auto; }
   .testi-dots{ display: none; }
-
-  .timeline{ padding-left: 0; }
-  .timeline-item{ display: flex; gap: 40px; padding-bottom: 56px; }
-  .timeline-track, .timeline-fill{ left: 160px; }
-  .timeline-dot{ left: 146px; }
-  .timeline-num-col{ width: 120px; flex-shrink: 0; padding-left: 44px; }
-  .timeline-content{ padding-left: 44px; }
 }
 
 /* ============================================================
